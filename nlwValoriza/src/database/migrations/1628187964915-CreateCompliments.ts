@@ -1,4 +1,4 @@
-import {MigrationInterface, QueryRunner, Table, TableForeignKey} from "typeorm";
+import {MigrationInterface, QueryRunner, Table} from "typeorm";
 
 export class CreateCompliments1628187964915 implements MigrationInterface {
 
@@ -52,8 +52,8 @@ export class CreateCompliments1628187964915 implements MigrationInterface {
                         onUpdate: "SET NULL"
                     },
                     {
-                        name: "FKUserTagCompliments",
-                        referencedTableName: "users",
+                        name: "FKTagCompliments",
+                        referencedTableName: "tags",
                         referencedColumnNames: ["id"],
                         columnNames: ["tag_id"],
                         onDelete: "SET NULL",
